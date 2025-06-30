@@ -4,10 +4,10 @@
 #
 # Linux build script pre-processor.
 #
-# This is called from build-linux-enhanced.sh before packages are built.
+# This is called from build-linux.sh before packages are built.
 # Use this to prepare platform specific resources.
 #
-# (c)2024 HomesteadTools
+# Template Linux preprocessing script for {{APP_DISPLAY_NAME}}
 
 if [ "$APP_ARCH" = "x64" ]; then
     :   

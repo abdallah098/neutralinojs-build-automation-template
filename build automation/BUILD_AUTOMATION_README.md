@@ -5,8 +5,8 @@ This folder contains all the build automation scripts and documentation for cros
 ## 📁 Contents
 
 ### Build Scripts
-- **`build-mac-enhanced.sh`** - Complete macOS app bundle and DMG creation
-- **`build-linux-enhanced.sh`** - Linux packaging (AppImage, DEB, RPM)
+- **`build-mac.sh`** - Complete macOS app bundle and DMG creation
+- **`build-linux.sh`** - Linux packaging (AppImage, DEB, RPM)
 - **`setup-macos-signing.sh`** - Apple Developer signing setup (optional)
 
 ### Processing Scripts
@@ -25,18 +25,18 @@ All scripts are automatically called by the workflows in `.github/workflows/`. N
 
 #### macOS Build
 ```bash
-chmod +x build-mac-enhanced.sh
-./build-mac-enhanced.sh --dmg
+chmod +x build-mac.sh
+./build-mac.sh --dmg
 ```
 
 #### Linux Build
 ```bash
-chmod +x build-linux-enhanced.sh
-./build-linux-enhanced.sh --appimage --deb --rpm
+chmod +x build-linux.sh
+./build-linux.sh --appimage --deb --rpm
 ```
 
 #### Windows Build
-Use Inno Setup to compile `HomesteadTools.iss` in the project root.
+Use Inno Setup to compile `template.iss` in the build automation folder.
 
 ## 📖 Documentation
 

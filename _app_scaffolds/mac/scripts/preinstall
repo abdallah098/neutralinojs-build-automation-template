@@ -1,15 +1,15 @@
 #!/bin/bash
 #
 # preinstall - Mac pre-installation script
-# Handles cleanup and preparation before installing Homestead Tools
+# Handles cleanup and preparation before installing {{APP_DISPLAY_NAME}}
 #
 # This script runs before the app is installed to /Applications
 
-APP_NAME="Homestead Tools"
+APP_NAME="{{APP_DISPLAY_NAME}}"
 APP_PATH="/Applications/${APP_NAME}.app"
-OLD_APP_NAMES=("HomesteadTools" "Homestead-Tools")
+OLD_APP_NAMES=("{{APP_BINARY_NAME}}" "{{APP_DISPLAY_NAME}}")
 
-echo "HomesteadTools Pre-Installation Setup"
+echo "{{APP_DISPLAY_NAME}} Pre-Installation Setup"
 echo "====================================="
 
 # Function to close running app instances
@@ -18,7 +18,7 @@ close_running_app() {
     
     # Kill any running instances of the app
     pkill -f "${APP_NAME}" 2>/dev/null || true
-    pkill -f "HomesteadTools" 2>/dev/null || true
+    pkill -f "{{APP_BINARY_NAME}}" 2>/dev/null || true
     
     # Wait a moment for processes to terminate
     sleep 2
@@ -56,7 +56,7 @@ remove_old_dock_entries() {
     defaults write com.apple.dock persistent-apps -array $(
         defaults read com.apple.dock persistent-apps | \
         grep -v "${APP_NAME}" | \
-        grep -v "HomesteadTools"
+        grep -v "{{APP_BINARY_NAME}}"
     ) 2>/dev/null || true
     
     echo "✓ Dock entries cleaned up"
@@ -72,10 +72,10 @@ remove_old_shortcuts() {
         # Remove shortcuts with various possible names
         rm -f "${DESKTOP_DIR}/${APP_NAME}"
         rm -f "${DESKTOP_DIR}/${APP_NAME} alias"
-        rm -f "${DESKTOP_DIR}/HomesteadTools"
-        rm -f "${DESKTOP_DIR}/HomesteadTools alias"
-        rm -f "${DESKTOP_DIR}/Homestead-Tools"
-        rm -f "${DESKTOP_DIR}/Homestead-Tools alias"
+        rm -f "${DESKTOP_DIR}/{{APP_BINARY_NAME}}"
+    rm -f "${DESKTOP_DIR}/{{APP_DISPLAY_NAME}}"
+        rm -f "${DESKTOP_DIR}/{{APP_BINARY_NAME}}-Tools"
+        rm -f "${DESKTOP_DIR}/{{APP_BINARY_NAME}}-Tools alias"
     fi
     
     echo "✓ Old desktop shortcuts removed"
@@ -89,8 +89,8 @@ clear_app_caches() {
     /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
     
     # Clear any cached data
-    rm -rf "$HOME/Library/Caches/com.homesteadtools.app" 2>/dev/null || true
-    rm -rf "$HOME/Library/Application Support/HomesteadTools" 2>/dev/null || true
+    rm -rf "$HOME/Library/Caches/com.{{APP_NAME_LOWERCASE}}.app" 2>/dev/null || true
+    rm -rf "$HOME/Library/Application Support/{{APP_BINARY_NAME}}" 2>/dev/null || true
     
     echo "✓ Application caches cleared"
 }
@@ -127,8 +127,8 @@ check_requirements() {
 backup_preferences() {
     echo "Backing up user preferences..."
     
-    PREFS_PATH="$HOME/Library/Preferences/com.homesteadtools.app.plist"
-    BACKUP_PATH="$HOME/Library/Preferences/com.homesteadtools.app.backup.plist"
+    PREFS_PATH="$HOME/Library/Preferences/com.{{APP_NAME_LOWERCASE}}.app.plist"
+    BACKUP_PATH="$HOME/Library/Preferences/com.{{APP_NAME_LOWERCASE}}.app.backup.plist"
     
     if [ -f "$PREFS_PATH" ]; then
         cp "$PREFS_PATH" "$BACKUP_PATH"

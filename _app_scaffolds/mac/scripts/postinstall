@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # postinstall - Mac post-installation script
-# Mirrors functionality from HomesteadTools.iss [Icons] and [Tasks] sections
+# Template postinstall script for {{APP_DISPLAY_NAME}}
 #
 # This script runs after the app is installed to /Applications
 # It creates Dock integration and optional desktop shortcuts
@@ -11,7 +11,7 @@ APP_PATH="/Applications/${APP_NAME}.app"
 DESKTOP_DIR="$HOME/Desktop"
 LAUNCHPAD_DB="$HOME/Library/Application Support/Dock/desktoppicture.db"
 
-echo "HomesteadTools Post-Installation Setup"
+echo "{{APP_DISPLAY_NAME}} Post-Installation Setup"
 echo "======================================="
 
 # Function to add app to Dock (mirrors .iss DefaultGroupName)

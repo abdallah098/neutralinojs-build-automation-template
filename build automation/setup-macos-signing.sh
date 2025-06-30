@@ -10,7 +10,7 @@
 # - Xcode or Xcode Command Line Tools
 
 echo
-echo -e "\033[1mmacOS Code Signing Setup for HomesteadTools\033[0m"
+echo -e "\033[1mmacOS Code Signing Setup for {{APP_DISPLAY_NAME}}\033[0m"
 echo
 
 # Install required tools
@@ -98,7 +98,7 @@ echo "2. Source the environment file before building:"
 echo "   source .env.macos-signing"
 echo
 echo "3. Build with signing and notarization:"
-echo "   ./build-mac-enhanced.sh --sign --notarize --dmg"
+echo "   ./build-mac.sh --sign --notarize --dmg"
 echo
 echo -e "\033[1mCertificate Installation:\033[0m"
 echo "If you don't have Developer certificates installed:"

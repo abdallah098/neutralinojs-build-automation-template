@@ -22,8 +22,8 @@ This guide provides complete instructions for setting up automated cross-platfor
 - **`build-linux.yml`** - Individual Linux builds
 
 ### Build Scripts (`build automation/`)
-- **`build-mac-enhanced.sh`** - macOS app bundle creation and DMG packaging
-- **`build-linux-enhanced.sh`** - Linux AppImage, DEB, and RPM packaging
+- **`build-mac.sh`** - macOS app bundle creation and DMG packaging
+- **`build-linux.sh`** - Linux AppImage, DEB, and RPM packaging
 - **`setup-macos-signing.sh`** - Apple Developer account setup (optional)
 - **`preproc-*.sh`** / **`postproc-*.sh`** - Build customization scripts
 
@@ -70,7 +70,7 @@ git push origin v1.0.1
 ## 📦 Build Outputs
 
 ### Windows
-- **File**: `HomesteadTools-Windows64_Installer.exe`
+- **File**: `{{APP_BINARY_NAME}}-Windows64_Installer.exe`
 - **Type**: Inno Setup installer
 - **Architecture**: x64
 - **Features**: Start menu shortcuts, desktop icon, uninstaller
@@ -188,15 +188,15 @@ Even if release fails, individual build artifacts are available:
 ```bash
 # Test macOS build (on macOS)
 cd "build automation"
-chmod +x build-mac-enhanced.sh
-./build-mac-enhanced.sh --dmg
+chmod +x build-mac.sh
+./build-mac.sh --dmg
 
 # Test Linux build (on Linux)
-chmod +x build-linux-enhanced.sh
-./build-linux-enhanced.sh --appimage --deb --rpm
+chmod +x build-linux.sh
+./build-linux.sh --appimage --deb --rpm
 
 # Test Windows build (on Windows)
-# Use Inno Setup GUI to compile HomesteadTools.iss
+# Use Inno Setup GUI to compile template.iss
 ```
 
 ## 🔄 Maintenance

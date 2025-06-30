@@ -21,6 +21,13 @@ Before using this template, replace the following placeholders throughout the pr
 4. `resources/js/main.js` - Main JavaScript file
 5. `build automation/template.iss` - Windows installer script
 6. `_app_scaffolds/` - Platform-specific packaging files
+7. `build automation/build-*.sh` - Build scripts
+8. `build automation/setup-macos-signing.sh` - macOS signing script
+
+**Additional placeholders for build automation:**
+- `{{APP_DESCRIPTION}}` - App description for package metadata
+- `{{GITHUB_USERNAME}}` - Your GitHub username
+- `{{GITHUB_REPO}}` - Your GitHub repository name
 
 ## Quick Start
 
@@ -147,8 +154,8 @@ Add your app icons to `resources/icons/` in the following formats:
 4. **Build for Distribution**
    ```bash
    # Local builds - Run appropriate build script from build automation/
-   ./build automation/build-linux-enhanced.sh    # Linux
-   ./build automation/build-mac-enhanced.sh      # macOS
+   ./build automation/build-linux.sh    # Linux
+   ./build automation/build-mac.sh      # macOS
    # Use Inno Setup with template.iss for Windows
    
    # Or use GitHub Actions for automated cloud builds
