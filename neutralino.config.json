@@ -1,0 +1,111 @@
+{
+  "$schema": "https://raw.githubusercontent.com/neutralinojs/neutralinojs/main/schemas/neutralino.config.schema.json",
+  "applicationId": "com.{{APP_NAME_LOWERCASE}}.app",
+  "version": "{{APP_VERSION}}",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/resources/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "tokenSecurity": "one-time",
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": true
+  },
+  "nativeAllowList": [
+    "app.*",
+    "os.*",
+    "debug.log"
+  ],
+  "globalVariables": {
+    "TEST1": "Hello",
+    "TEST2": [
+      2,
+      4,
+      5
+    ],
+    "TEST3": {
+      "value1": 10,
+      "value2": {}
+    }
+  },
+  "modes": {
+    "window": {
+      "title": "{{APP_DISPLAY_NAME}}",
+      "width": 800,
+      "height": 500,
+      "minWidth": 400,
+      "minHeight": 200,
+      "center": true,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/resources/icons/appIcon.png",
+      "enableInspector": false,
+      "borderless": false,
+      "maximize": true,
+      "hidden": false,
+      "resizable": true,
+      "exitProcessOnClose": true,
+      "minimizeToTray": false
+    },
+    "browser": {
+      "globalVariables": {
+        "TEST": "Test value browser"
+      },
+      "nativeBlockList": [
+        "filesystem.*"
+      ]
+    },
+    "cloud": {
+      "url": "/resources/#cloud",
+      "nativeAllowList": [
+        "app.*"
+      ]
+    },
+    "chrome": {
+      "width": 800,
+      "height": 500,
+      "args": "--user-agent=\"Neutralinojs chrome mode\"",
+      "nativeBlockList": [
+        "filesystem.*",
+        "os.*"
+      ]
+    }
+  },
+  "cli": {
+    "binaryName": "{{APP_BINARY_NAME}}",
+    "resourcesPath": "/resources/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/resources/js/neutralino.js",
+    "binaryVersion": "6.0.0",
+    "clientVersion": "6.0.0"
+  },
+  "buildScript": {
+    "mac": {
+      "architecture": ["x64", "arm64", "universal"],
+      "minimumOS": "10.13.0",
+      "appName": "{{APP_DISPLAY_NAME}}",
+      "appBundleName": "{{APP_DISPLAY_NAME}}", 
+      "appIdentifier": "com.{{APP_NAME_LOWERCASE}}.app",
+      "appIcon": "resources/icons/icon.icns",
+      "appPublisher": "{{APP_PUBLISHER}}",
+      "appCopyright": "© {{APP_YEAR}} {{APP_PUBLISHER}}"
+    },
+    "win": {
+      "architecture": ["x64"],
+      "appName": "{{APP_BINARY_NAME}}",
+      "appIcon": "resources/icons/icon.ico"
+    },
+    "linux": {
+      "architecture": ["x64", "arm64", "armhf"],
+      "appName": "{{APP_DISPLAY_NAME}}",
+      "appIcon": "resources/icons/icon.png",
+      "appPath": "/usr/share/{{APP_BINARY_NAME}}",
+      "appIconPath": "/usr/share/{{APP_BINARY_NAME}}/icon.png",
+      "appIconLocation": "/usr/share/{{APP_BINARY_NAME}}/icon.png",
+      "appPublisher": "{{APP_PUBLISHER}}",
+      "appCopyright": "© {{APP_YEAR}} {{APP_PUBLISHER}}"
+    }
+  }
+} 
