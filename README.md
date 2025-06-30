@@ -35,9 +35,11 @@ Before using this template, replace the following placeholders throughout the pr
 
 ```
 neutralino-template/
+├── .github/workflows/        # GitHub Actions CI/CD workflows
 ├── build automation/          # Build scripts and automation
 │   ├── template.iss          # Windows installer script
 │   ├── build-*.sh           # Platform build scripts
+│   ├── GITHUB_ACTIONS_SETUP.md # GitHub Actions setup guide
 │   └── *.py                 # Utility scripts
 ├── _app_scaffolds/           # Platform-specific packaging
 │   ├── linux/               # Linux .desktop and install scripts
@@ -61,7 +63,7 @@ neutralino-template/
 
 ## Build Automation
 
-This template includes comprehensive build automation for all platforms:
+This template includes comprehensive build automation for all platforms using **GitHub Actions** CI/CD:
 
 ### Windows
 - Uses `template.iss` for Inno Setup installer
@@ -77,6 +79,29 @@ This template includes comprehensive build automation for all platforms:
 - Creates .deb packages
 - AppImage support
 - Desktop file integration
+
+## GitHub Actions CI/CD
+
+This template includes pre-configured GitHub Actions workflows for automated building and releasing:
+
+### Features
+- **Automated Builds**: Triggers on push to main branch and pull requests
+- **Multi-Platform**: Builds for Windows, macOS, and Linux simultaneously
+- **Release Management**: Automatically creates releases with built binaries
+- **Code Signing**: Support for signing binaries on all platforms
+- **Artifact Storage**: Stores build artifacts for download
+
+### Setup
+1. Push your project to a GitHub repository
+2. Configure secrets for code signing (optional)
+3. Review and customize the workflow in `.github/workflows/`
+4. See `build automation/GITHUB_ACTIONS_SETUP.md` for detailed setup instructions
+
+### Workflow Triggers
+- Push to `main` branch
+- Pull requests
+- Manual workflow dispatch
+- Tag creation for releases
 
 ## Icon Requirements
 
@@ -95,10 +120,12 @@ Add your app icons to `resources/icons/` in the following formats:
 - Define build targets
 - Set permissions and API access
 
-### Build Scripts
+### Build Scripts & GitHub Actions
 - Customize build automation in `build automation/`
-- Configure code signing
-- Set distribution parameters
+- Configure GitHub Actions workflows for automated builds
+- Set up code signing for all platforms
+- Automated release creation and distribution
+- Cross-platform builds in the cloud
 
 ## Getting Started with Development
 
@@ -119,10 +146,13 @@ Add your app icons to `resources/icons/` in the following formats:
 
 4. **Build for Distribution**
    ```bash
-   # Run appropriate build script from build automation/
+   # Local builds - Run appropriate build script from build automation/
    ./build automation/build-linux-enhanced.sh    # Linux
    ./build automation/build-mac-enhanced.sh      # macOS
    # Use Inno Setup with template.iss for Windows
+   
+   # Or use GitHub Actions for automated cloud builds
+   # See build automation/GITHUB_ACTIONS_SETUP.md for configuration
    ```
 
 ## Features Included
@@ -132,10 +162,12 @@ Add your app icons to `resources/icons/` in the following formats:
 - ✅ Platform detection
 - ✅ System notifications
 - ✅ Window management
+- ✅ GitHub Actions CI/CD automation
 - ✅ Build automation for all platforms
 - ✅ Installer/package creation
 - ✅ Icon and branding support
 - ✅ Development tools integration
+- ✅ Automated release management
 
 ## Customization
 
